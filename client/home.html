@@ -1,0 +1,25 @@
+<template name="home">
+  <div class="row">
+    <div class="col s12">
+      <h1>WebRTC Signalling with Meteor demo</h1>
+      <p>To start the chat open another browser window or go on your phone/tablet or get friend to go to this same address</p>
+      <p>Specifically open in another device/window <a href="{{roomName}}" target="_blank">{{roomName}}</a></p>
+      <p>This demo sets up a video and audio call with one other person on who is at the same URL</p>
+      <button class="btn btn-info" name="call" {{canCall}}>{{callText}}</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="stream local-stream">
+        <h2>Local GetUserMedia Video</h2>
+        <video id="local-stream" src="{{localStream}}" autoplay muted></video>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="stream remote-stream">
+        <h2>Remote WebRTC Video Stream</h2>
+        <video src="{{remoteStream}}" autoplay></video>
+      </div>
+    </div>
+  </div>
+</template>

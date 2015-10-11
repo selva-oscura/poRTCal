@@ -1,0 +1,149 @@
+*{
+	box-sizing: border-box;
+}
+
+.portcl-blue{
+	background-color: rgba(20,172,210,1);
+}
+.portcl-blue:hover{
+	background-color: rgba(25,235,250,1);
+}
+
+.portcl-dark-blue{
+	background-color: rgba(15,80,200,1);
+}
+.portcl-bright-blue{
+	background-color: rgba(25,235,250,1);
+}
+.portcl-dark-orange{
+	background-color: rgba(250,110,0,1);
+}
+.portcl-bright-orange{
+	background-color: rgba(250,250,0,1);
+}
+
+.portcl-blue-text{
+	color: rgba(20,172,210,1);
+}
+.portcl-dark-blue-text{
+	color: rgba(15,80,200,1);
+}
+.portcl-bright-blue-text{
+	color: rgba(25,235,250,1);
+}
+.portcl-dark-orange-text{
+	color: rgba(250,110,0,1);
+}
+.portcl-bright-orange-text{
+	color: rgba(250,250,0,1);
+}
+
+
+@media screen and (max-aspect-ratio: 16/9){ 
+	.bg{
+		height: 100vh;
+	}
+}
+
+@media screen and (min-aspect-ratio: 16/9) { 
+	.bg{
+		width: 100vw;
+	}
+}
+
+body{
+	position:relative;
+	overflow-y:hidden;
+	overflow-x:hidden;
+}
+
+.bg {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: -100;
+}
+
+nav{
+	background-color: rgba(0,0,0,.1);
+	color: rgba(15,80,200,1);
+}
+
+
+/* label color */
+nav .input-field label {
+ color: rgba(15,80,200,1);
+}
+/* label focus color */
+nav .input-field input[type=text]:focus + label {
+ color: rgba(15,80,200,1);
+}
+/* label underline focus color */
+nav .input-field input[type=text]:focus {
+ border-bottom: 1px solid rgba(15,80,200,1);
+ box-shadow: 0 1px 0 0 rgba(15,80,200,1);
+}
+/* valid color */
+nav .input-field input[type=text].valid {
+ border-bottom: 1px solid rgba(15,80,200,1);
+ box-shadow: 0 1px 0 0 rgba(15,80,200,1);
+}
+/* invalid color */
+nav .input-field input[type=text].invalid {
+ border-bottom: 1px solid rgba(250,110,0,1);
+ box-shadow: 0 1px 0 0 rgba(250,110,0,1);
+}
+/* icon prefix focus color */
+nav .input-field .prefix.active {
+ color:  rgba(15,80,200,1);
+}
+
+nav label, nav label:active, nav label:focus, nav label:hover, nav label:visited, input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: rgba(15,80,200,1);
+}
+input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+	color: rgba(15,80,200,1);
+    border-bottom: 1px solid rgba(15,80,200,1);
+    box-shadow: 0 1px 0 0 rgba(15,80,200,1);
+}
+
+
+.btn:hover, .btn-large:hover {
+    background-color: rgba(15,80,200,1);
+}
+
+.logo-text{
+	vertical-align: top;
+	padding-bottom:12px;
+	color:rgba(255,255,255,1);
+	font-weight: 700;
+	text-shadow: 1px 4px 12px rgba(0,0,0,1);
+}
+#logo-o{
+	height:60px;
+}
+
+
+.videos {
+  text-align: center;
+}
+
+canvas {
+  background-color: #ccc;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.stream {
+  padding: 5px;
+}
+
+.image-stream,
+video {
+  width: 100%;
+  max-width: 320px;
+}
