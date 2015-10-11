@@ -1,0 +1,27 @@
+/* CSS declarations go here */
+
+.theirVideo, .myVideo {
+	margin-left: -180px;
+	margin-top: -30px;
+}
+
+.portalImg {
+	width: 600px;
+}
+
+.myVideoBox {
+	/* border-radius: 300px; */
+	width: 200px;
+	height: 400px;	
+
+	padding: 2px; 
+	margin: 10px;
+	margin-left: 185px;
+	margin-top: -420px;
+
+	overflow: hidden;
+
+	-webkit-mask-box-image: url(https://www.webkit.org/blog-files/vignette-mask.png);
+
+    /* -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);  */
+}
