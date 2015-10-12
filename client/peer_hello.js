@@ -43,7 +43,7 @@
     // This event: remote peer receives a call
     peer.on('open', function () {
       $('#myPeerId').text(peer.id);
-      var avatar = "avatar"+Math.floor(Math.random()*10);
+      var avatar = "avatar"+Math.floor(Math.random()*8);
       // update the current user's profile
       Meteor.users.update({_id: Meteor.userId()}, {
         $set: {

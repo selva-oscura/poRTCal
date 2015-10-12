@@ -3,14 +3,15 @@
     <div id="video-container">
       <!-- note the 'autoplay' -->
       <div class="row">
-        <div class="left">
+        <div class="left address-book">
            <p class="invisible">Your id: <span id="myPeerId">...</span></p>
           <ul class="collection transparent">
               <li class="collection-item">
                 Make a call
               </li>
               {{#each users}}
-                <li class="collection-item waves-effect waves-light makeCall">Call {{#each emails}}{{address}}{{/each}}</li>
+                <li class="collection-item waves-effect waves-light makeCall">
+                  <img class="avatar" src="/img/{{profile.avatar}}.jpg" /><span class="avatar-text">{{#each emails}}{{address}}{{/each}}</span></li>
               {{/each}}
 
                 <li class="collection-item waves-effect waves-light" id="endCall">

@@ -215,7 +215,7 @@ footer.page-footer{
 }
 
 .collection{
-	width:240px;
+	width:300px;
 	border:0px solid rgba(127,127,127,0);
 }
 
@@ -240,6 +240,7 @@ footer.page-footer{
 
 .collection-item{
 	width:100%;
+	vertical-align: top;
 }
 
 #theirvideoBox{
@@ -275,4 +276,15 @@ footer.page-footer{
 
 .invisible{
 	color:rgba(0,0,0,0);
+}
+
+.avatar{
+	height:64px;
+	width:64px;
+	border-radius: 32px;
+}
+
+
+.address-book{
+	vertical-align: top;
 }
