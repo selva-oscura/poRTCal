@@ -223,6 +223,10 @@ footer.page-footer{
 	padding-top:36px;
 }
 
+.collection{
+	z-index:1000;
+}
+
 .transparent .collection-item{
 	background-color: rgba(189,189,189,.25);
 	border-bottom: 1px solid rgba(0,0,0,.4);
@@ -267,4 +271,8 @@ footer.page-footer{
 	right:-125px;
 	min-width:640px;
 	z-index:10;
+}
+
+.invisible{
+	color:rgba(0,0,0,0);
 }

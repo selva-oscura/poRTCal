@@ -1,7 +1,9 @@
   Template.hello.events({
     "click .makeCall": function () {
       var user = this;
-      console.log('trying to call',user.profile.peerId);
+      if(user){
+        console.log('trying to call',user.profile.peerId);
+      }
       var outgoingCall = peer.call(user.profile.peerId, window.localStream);
       window.currentCall = outgoingCall;
       outgoingCall.on('stream', function (remoteStream) {
@@ -15,21 +17,6 @@
       window.currentCall.close();
     }
   });
-
-  // Template.hello.events({
-  //   "click #makeCall": function () {
-  //     var outgoingCall = peer.call($('#remotePeerId').val(), window.localStream);
-  //     window.currentCall = outgoingCall;
-  //     outgoingCall.on('stream', function (remoteStream) {
-  //       window.remoteStream = remoteStream;
-  //       var video = document.getElementById("theirVideo")
-  //       video.src = URL.createObjectURL(remoteStream);
-  //     });
-  //   },
-  //   "click #endCall": function () {
-  //     window.currentCall.close();
-  //   }
-  // });
 
   Template.hello.helpers({
     users: function () {
@@ -56,10 +43,11 @@
     // This event: remote peer receives a call
     peer.on('open', function () {
       $('#myPeerId').text(peer.id);
+      var avatar = "avatar"+Math.floor(Math.random()*10);
       // update the current user's profile
       Meteor.users.update({_id: Meteor.userId()}, {
         $set: {
-          profile: { peerId: peer.id}
+          profile: { peerId: peer.id, avatar:avatar}
         }
       });
     });
