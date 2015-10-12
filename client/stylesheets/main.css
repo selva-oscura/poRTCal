@@ -52,7 +52,7 @@
 }
 
 body{
-	position:relative;
+/*	position:relative;*/
 	overflow-y:hidden;
 	overflow-x:hidden;
     display: flex;
@@ -215,6 +215,7 @@ footer.page-footer{
 }
 
 .collection{
+	width:240px;
 	border:0px solid rgba(127,127,127,0);
 }
 
@@ -235,4 +236,35 @@ footer.page-footer{
 
 .collection-item{
 	width:100%;
+}
+
+#theirvideoBox{
+	position:absolute;
+	min-width:640px;
+	min-height:480px;
+	-webkit-mask-box-image: url(https://www.webkit.org/blog-files/vignette-mask.png);
+	z-index:20;
+}
+
+#theirVideo{
+	position:absolute;
+	top:100px;
+	right:-120px;
+	min-width:640px;
+	min-height:480px;
+	z-index:20;
+}
+#blue-portal{
+	position:absolute;
+	top:100px;
+	right:-120px;
+	min-width:640px;
+	z-index:40;
+}
+#blue-portal-bg{
+	position:absolute;
+	top:100px;
+	right:-125px;
+	min-width:640px;
+	z-index:10;
 }
