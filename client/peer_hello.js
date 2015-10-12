@@ -1,6 +1,7 @@
   Template.hello.events({
     "click #makeCall": function () {
       var user = this;
+      console.log('trying to call',user.profile.peerId);
       var outgoingCall = peer.call(user.profile.peerId, window.localStream);
       window.currentCall = outgoingCall;
       outgoingCall.on('stream', function (remoteStream) {
@@ -14,11 +15,27 @@
     }
   });
 
+  // Template.hello.events({
+  //   "click #makeCall": function () {
+  //     var outgoingCall = peer.call($('#remotePeerId').val(), window.localStream);
+  //     window.currentCall = outgoingCall;
+  //     outgoingCall.on('stream', function (remoteStream) {
+  //       window.remoteStream = remoteStream;
+  //       var video = document.getElementById("theirVideo")
+  //       video.src = URL.createObjectURL(remoteStream);
+  //     });
+  //   },
+  //   "click #endCall": function () {
+  //     window.currentCall.close();
+  //   }
+  // });
+
   Template.hello.helpers({
     users: function () {
       // exclude the currentUser
       var userIds = Presences.find().map(function(presence) {return presence.userId;});
       return Meteor.users.find({_id: {$in: userIds, $ne: Meteor.userId()}});
+          // return Meteor.users.find();
     }
   });
 

@@ -2,8 +2,16 @@
     <h2>Video Chat</h2>
     <div id="video-container">
       <!-- note the 'autoplay' -->
-      Your friend: <video id="theirVideo" class="theirVideo" autoplay></video>
-      <video id="myVideo" muted="true" class="myVideo" autoplay></video>: You
+      <div class="row">
+        <div class="col s5">
+          <p>Your friend: </p>
+          <video id="theirVideo" class="theirVideo" autoplay></video>
+        </div>
+        <div class="col s5 offset-s2">
+          <p>You:</p>
+          <video id="myVideo" muted="true" class="myVideo" autoplay></video>
+        </div>
+      </div>
     </div>
 
     <h2>Controls</h2>
