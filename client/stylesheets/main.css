@@ -55,7 +55,25 @@ body{
 	position:relative;
 	overflow-y:hidden;
 	overflow-x:hidden;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
+/*body {
+	padding: 0px;
+	margin: 0px;
+	position:relative;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	background-color: rgba(0,0,0,0);
+}*/
+
+main {
+	flex: 1 0 auto;
+}
+
+
 
 .bg {
 	position: fixed; 
@@ -123,6 +141,27 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 	height:60px;
 }
 
+/*.accounts-dialog{
+	margin:2px 0px;
+	width:220px;	
+}
+*/
+
+.login-trigger-space{
+	padding: 18px 18px;
+}
+.side-nav a, .accounts-dialog{
+	color: rgba(15,80,200,1);
+}
+
+#login-buttons .login-button, .accounts-dialog .login-button{
+	background-color: rgba(15,80,200,1);
+	color:white;
+}
+
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover{
+	background-color: rgba(15,80,200,1);
+}
 
 .videos {
   text-align: center;
@@ -146,4 +185,54 @@ canvas {
 video {
   width: 100%;
   max-width: 320px;
+}
+
+.local-stream{
+	width:123px;
+	height:94px;
+	overflow: hidden;
+	border-radius: 70px;
+	-moz-border-radius: 70px;
+	-webkit-border-radius: 70px;
+		border:3px groove  rgba(250,250,0,1);;;
+	margin-right:2px;
+	margin-bottom:3px;
+}
+#myVideo{
+	width: 120px;
+	height:90px;
+	border-radius: 70px;
+-moz-border-radius: 70px;
+-webkit-border-radius: 70px;
+	border:4px groove rgba(250,110,0,1);
+	margin-top:-6px;
+	margin-left:-6px;
+}
+
+footer.page-footer{
+	background-color: rgba(0,0,0,0);
+	height:144px;
+}
+
+.collection{
+	border:0px solid rgba(127,127,127,0);
+}
+
+#video-container{
+	padding-top:36px;
+}
+
+.transparent .collection-item{
+	background-color: rgba(189,189,189,.25);
+	border-bottom: 1px solid rgba(0,0,0,.4);
+	padding: 5px 10px;
+}
+.transparent .collection-item, .transparent .collection-item a{
+	color: rgba(15,80,200,1);
+	font-weight: 700;
+	text-shadow: -2px -1px 8px rgba(25,235,250,1);
+}
+
+.collection-item{
+	width:100%;
 }

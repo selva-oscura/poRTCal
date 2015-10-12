@@ -9,14 +9,8 @@
 <template name="menu">
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center">
-      	<span class="logo-text">P</span>
-      	<img src="img/portal_O.png" alt="letter o" id="logo-o"/>
-      	<span class="logo-text">R T C A L</span>
-      </a>
-      <a href="#" data-activates="menu" class="menu-trigger portcl-blue waves-effect waves-light btn-large btn-floating "><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="menu" class="menu-trigger portcl-dark-blue waves-effect waves-light btn-large btn-floating "><i class="material-icons">menu</i></a>
       <ul class="side-nav" id="menu">
-        <li>{{> loginButtons}}</li>
         <li>
           <form>
             <input type="text" name="newContact" id="new_contact" placeholder="e-mail address" class="portcl-dark-blue "/>
@@ -27,10 +21,12 @@
           </form>
         </li>
       </ul>
-      <a href="#" class="right">
-        <!-- <li>{{> loginButtons}}</li> -->
+      <a href="#" class="portcl-dark-blue login-trigger-space">{{> loginButtons}}</a>
+      <a href="#!" class="brand-logo right">
+        <span class="logo-text">P</span>
+        <img src="img/portal_O.png" alt="letter o" id="logo-o"/>
+        <span class="logo-text">R T C A L</span>
       </a>
-
     </div>
   </nav>
 </template>

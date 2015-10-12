@@ -1,5 +1,5 @@
   Template.hello.events({
-    "click #makeCall": function () {
+    "click .makeCall": function () {
       var user = this;
       console.log('trying to call',user.profile.peerId);
       var outgoingCall = peer.call(user.profile.peerId, window.localStream);
@@ -11,6 +11,7 @@
       });
     },
     "click #endCall": function () {
+      console.log('click');
       window.currentCall.close();
     }
   });

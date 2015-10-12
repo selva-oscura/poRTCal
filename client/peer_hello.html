@@ -1,26 +1,35 @@
 <template name="hello">
-    <h2>Video Chat</h2>
+    <main>
     <div id="video-container">
       <!-- note the 'autoplay' -->
       <div class="row">
         <div class="col s5">
-          <p>Your friend: </p>
-          <video id="theirVideo" class="theirVideo" autoplay></video>
+          <ul class="collection transparent">
+              <li class="collection-item">
+                Make a call
+              </li>
+              {{#each users}}
+                <li class="collection-item waves-effect waves-light makeCall">Call {{#each emails}}{{address}}{{/each}}</li>
+              {{/each}}
+
+                <li class="collection-item waves-effect waves-light" id="endCall">
+                End Call 
+                </li>
+<!--               <li class="collection-item waves-effect waves-light">
+              </li> -->
+            </ul>
         </div>
-        <div class="col s5 offset-s2">
-          <p>You:</p>
-          <video id="myVideo" muted="true" class="myVideo" autoplay></video>
+        <div class="col s6 offset-s1">
+          <video id="theirVideo" class="theirVideo" autoplay></video>
         </div>
       </div>
     </div>
-
-    <h2>Controls</h2>
-    <div>
-      <p>Your id: <span id="myPeerId">...</span></p>
-      <p>Make a call</p><br>
-      {{#each users}}
-        <p><a href="#" id="makeCall">Call {{#each emails}}{{address}}{{/each}}</a></p>
-      {{/each}}
-      <p><a href="#" id="endCall">End Call</a></p>
+  </main>
+  <footer class="page-footer">
+      <div class="row">
+          <div class="stream local-stream right">
+            <video id="myVideo" muted="true" class="myVideo" autoplay></video>
+          </div>
     </div>
+  </footer>
 </template>
