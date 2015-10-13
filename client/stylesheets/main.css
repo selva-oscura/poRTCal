@@ -242,12 +242,12 @@ footer.page-footer{
 	vertical-align: top;
 }
 
-#theirvideoBox{
+.theirvideoBox{
 	position:absolute;
 	min-width:640px;
 	min-height:480px;
 	-webkit-mask-box-image: url(https://www.webkit.org/blog-files/vignette-mask.png);
-	z-index:20;
+	z-index:21;
 }
 
 #theirVideo{
@@ -257,6 +257,7 @@ footer.page-footer{
 	min-width:640px;
 	min-height:480px;
 	z-index:20;
+	-webkit-clip-path: ellipse(20% 48%);
 }
 #blue-portal{
 	position:absolute;
