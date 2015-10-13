@@ -87,7 +87,6 @@ nav{
 	color: rgba(15,80,200,1);
 }
 
-
 /* label color */
 nav .input-field label {
  color: rgba(15,80,200,1);
@@ -125,6 +124,17 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
     box-shadow: 0 1px 0 0 rgba(15,80,200,1);
 }
 
+
+@media only screen and (max-width: 992px){
+	nav .brand-logo {
+	     left: 0%; 
+	     -webkit-transform: translateX(0%); 
+	    -moz-transform: translateX(0%);
+	    -ms-transform: translateX(0%);
+	    -o-transform: translateX(0%);
+	     transform: translateX(0%); 
+	}
+}
 
 .btn:hover, .btn-large:hover {
     background-color: rgba(15,80,200,1);
@@ -228,9 +238,10 @@ footer.page-footer{
 }
 
 .transparent .collection-item{
-	background-color: rgba(189,189,189,.25);
+	background-color: rgba(189,189,189,.5);
 	border-bottom: 1px solid rgba(0,0,0,.4);
 	padding: 5px 10px;
+	text-shadow: 0px 0px 8px rgba(255,255,255,1);
 }
 .transparent .collection-item, .transparent .collection-item a{
 	color: rgba(15,80,200,1);
@@ -240,6 +251,10 @@ footer.page-footer{
 .collection-item{
 	width:100%;
 	vertical-align: top;
+}
+
+.compact{
+	line-height: 1rem !important;
 }
 
 .theirvideoBox{

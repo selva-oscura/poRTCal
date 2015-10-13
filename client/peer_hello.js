@@ -24,6 +24,13 @@
       var userIds = Presences.find().map(function(presence) {return presence.userId;});
       return Meteor.users.find({_id: {$in: userIds, $ne: Meteor.userId()}});
           // return Meteor.users.find();
+    },
+    otherUsers: function(){
+      var userIds = Presences.find().map(function(presence) {return presence.userId;});
+      if (Meteor.users.find({_id: {$in: userIds, $ne: Meteor.userId()}}).count>0){
+        return true;
+      }
+      return false;
     }
   });
 

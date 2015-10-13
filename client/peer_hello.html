@@ -6,17 +6,24 @@
         <div class="left address-book">
            <p class="invisible">Your id: <span id="myPeerId">...</span></p>
           <ul class="collection transparent">
+              {{#if otherUsers}}
               <li class="collection-item">
                 Make a call
               </li>
-              {{#each users}}
-                <li class="collection-item waves-effect waves-light makeCall">
-                  <img class="avatar" src="/img/{{profile.avatar}}.jpg" /><span class="avatar-text">{{#each emails}}{{address}}{{/each}}</span></li>
-              {{/each}}
-
+                {{#each users}}
+                  <li class="collection-item waves-effect waves-light makeCall">
+                    <img class="avatar" src="/img/{{profile.avatar}}.jpg" /><span class="avatar-text">{{#each emails}}{{address}}{{/each}}</span></li>
+                {{/each}}
                 <li class="collection-item waves-effect waves-light" id="endCall">
                 End Call 
                 </li>
+              {{else}}
+                <li class="collection-item compact">
+                  We're sorry. No one else is currently logged on.<br />
+                  If you want to try it out, open a separate browser window in incognito mode and log in with a different user name.  (Be sure to approve user of camera and microphone.)<br />
+                  Note: Works best in Chrome.
+                </li>
+              {{/if}}
             </ul>
         </div>
         <div class="right theirVideoBox">
