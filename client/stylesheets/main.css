@@ -235,7 +235,6 @@ footer.page-footer{
 .transparent .collection-item, .transparent .collection-item a{
 	color: rgba(15,80,200,1);
 	font-weight: 700;
-	text-shadow: -2px -1px 8px rgba(25,235,250,1);
 }
 
 .collection-item{
