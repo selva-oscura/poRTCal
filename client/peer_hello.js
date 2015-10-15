@@ -62,9 +62,11 @@
     // This event: remote peer receives a call
     peer.on('call', function (incomingCall) {
       window.currentCall = incomingCall;
+      console.log('incomingCall',incomingCall)
       incomingCall.answer(window.localStream);
       incomingCall.on('stream', function (remoteStream) {
         window.remoteStream = remoteStream;
+        console.log('remoteStream', remoteStream);
         var video = document.getElementById("theirVideo")
         video.src = URL.createObjectURL(remoteStream);
       });
@@ -81,7 +83,8 @@
       var video = document.getElementById("myVideo");
       video.src = URL.createObjectURL(stream);
       window.localStream = stream;
-    }, function (error) { console.log(error); }
+    }, 
+      function (error) { console.log(error); }
     );
 
   });
